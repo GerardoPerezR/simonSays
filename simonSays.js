@@ -1,6 +1,7 @@
 
 const  arrayQuestion = [] ;
 const  arrayAnswer   = [] ;
+const arrDelay       = [];
 var num = 0
 
 function simonSays()  {
@@ -12,7 +13,7 @@ function simonSays()  {
                 arrayQuestion.push(num + 1);
                 document.getElementById("demo").innerHTML = arrayQuestion;
                 console.log(arrayQuestion);
-                
+          
 
                 //EMPTY ARRAYANSWER
                
@@ -20,7 +21,7 @@ function simonSays()  {
 
                 document.getElementById("demo2").innerHTML = arrayAnswer;
 
-
+                simonPlay(...arrayQuestion);
 
 
 
@@ -69,11 +70,31 @@ checkAnswer();
         }
 
 
-        function simonPlay(arrayQuestion)     {
+        function simonPlay(...arrDelay)     {
 
                 // loop function returning each number of the array
-                //play note for note with pause in between
+              
+                arrDelay = arrayQuestion;
 
+                for (let i = 0; i < arrDelay.length; i++)   {  
+
+               
+
+                    delay(i);
+                }
+
+
+                function delay(i)    {
+                     let k = i;
+                    setTimeout(() => {document.getElementById("demo3").innerHTML = arrayQuestion[k]}, 700 * (k + 1));
+                   
+                    console.log(arrDelay[k]);
+                    return arrDelay[k];
+                }
+
+                //arrDelay.forEach(setInterval(document.getElementById("demo3").innerHTML = (arrDelay ), 2000));
+                //play note for note with pause in between
+                return k;
         }
 
 
