@@ -86,7 +86,7 @@ checkAnswer();
 
                 function delay(i)    {
                      let k = i;
-                    setTimeout(() => {document.getElementById("demo3").innerHTML = arrayQuestion[k]}, 700 * (k + 1));
+                    setTimeout(() => {document.getElementById("demo3").innerHTML = arrayQuestion[k]}, 700 * (k + 1) );
                    
                     console.log(arrDelay[k]);
                     return arrDelay[k];
