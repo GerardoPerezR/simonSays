@@ -20,6 +20,7 @@ function simonSays()  {
                 arrayAnswer.length=0;
 
                 document.getElementById("demo2").innerHTML = arrayAnswer;
+                
 
                 simonPlay(...arrayQuestion);
 
@@ -43,7 +44,7 @@ return arrayQuestion;
 }
 function checkAnswer()    {
 
-    document.getElementById("demo2").innerHTML = arrayAnswer;
+    //document.getElementById("demo2").innerHTML = arrayAnswer;
 
     if (JSON.stringify(arrayQuestion) == JSON.stringify(arrayAnswer))   {
         simonSays();
@@ -59,7 +60,7 @@ function answer(num)    {
         var arrayQuestionLength = arrayQuestion.length;
 
         arrayAnswer.push(num)
-        document.getElementById("demo2").innerHTML = arrayAnswer;
+        //document.getElementById("demo2").innerHTML = arrayAnswer;
         console.log(arrayAnswer);
 
         if (arrayAnswerLength == arrayQuestionLength -1)  {
@@ -86,8 +87,8 @@ checkAnswer();
 
                 function delay(i)    {
                      let k = i;
-                    setTimeout(() => {document.getElementById("demo3").innerHTML = arrayQuestion[k]}, 700 * (k + 1) );
-                   
+                    setTimeout(() => {document.getElementById("demo3").innerHTML = arrayQuestion[k]; setTimeout (()=>{document.getElementById("button"+ (num+1)).style.color = "white";  }, 700 * (k +1) );}, 700 * (k+1));
+                    
                     console.log(arrDelay[k]);
                     return arrDelay[k];
                 }
