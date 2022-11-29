@@ -40,11 +40,11 @@
 
 border-radius: 100%;
 background-color: black;
-position: fixed;
-top:25%;
+position: absolute;
+top:26vh;
 left: 38vw;
-width: 380px;
-height: 380px;
+width: 24vw;
+height: 24vw;
 
 
 }
