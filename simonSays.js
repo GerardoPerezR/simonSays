@@ -89,7 +89,7 @@ checkAnswer();
 
                 function delay(i)    {
                      var k = i;
-                    setTimeout(() => {document.getElementById("demo3").innerHTML = arrayQuestion[i]; setTimeout(()=>{document.getElementById("button"+ arrDelay[i]).classList.remove('playing') ;  }, 400 ); document.getElementById("button"+ arrDelay[i]).classList.add('playing');}, 700 * (k +1));
+                    setTimeout(() => {; setTimeout(()=>{document.getElementById("button"+ arrDelay[i]).classList.remove('playing') ;  }, 400 ); document.getElementById("button"+ arrDelay[i]).classList.add('playing');}, 700 * (k +1));
                     
                     console.log(arrDelay[i]);
                     return arrDelay[i];

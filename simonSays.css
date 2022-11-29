@@ -4,8 +4,10 @@
 
     
     display: grid;
-    grid-gap: 12px;
-    grid-template-columns: auto auto;
+    grid-gap: 0px;
+    grid-template-columns: 360px 360px;
+    align-items: center;
+    justify-content: center;
     
 
 }
@@ -15,13 +17,44 @@
 
 
    font-size: 120px;
-   transition: all 100ms;
+   height: 360px;
+   width: 360px;
+   transition: all 200ms;
+   margin: 0;
+
 
 }
 .playing {
-  transform: scale(1.1);
+  
   border-color: white;
   background-color: aquamarine !important;
+
+}
+
+
+.center {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+border-radius: 100%;
+background-color: black;
+position: fixed;
+top:25%;
+left: 38vw;
+width: 380px;
+height: 380px;
+
+
+}
+
+.startButton  {
+
+  background-color: blueviolet;
+  height: 120px;
+  width: 120px;
+  border-radius: 100%;
 
 }
 
@@ -47,7 +80,7 @@ align-items: center;
 #button1    {
 
     background-color: red;
-    border-radius: -96px;
+    border-radius: 100% 0 0 0;
     
     
 
@@ -56,19 +89,21 @@ align-items: center;
 #button2    {
 
     background-color: blue;
+    border-radius: 0 100% 0 0;
    
 }
 
 #button3    {
 
         background-color: green;
+        border-radius: 0 0 0 100%;
        
 }
 
 #button4    {
 
     background-color: yellow;
-  
+    border-radius: 0 0 100% 0;
 }
 
 
