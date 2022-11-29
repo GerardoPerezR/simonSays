@@ -1,7 +1,7 @@
 
 const  arrayQuestion = [] ;
 const  arrayAnswer   = [] ;
-const arrDelay       = [];
+const arrDelay       = [] ;
 var num = 0
 
 function simonSays()  {
@@ -50,7 +50,7 @@ function checkAnswer()    {
         simonSays();
     }
     else {
-        document.getElementById("demo2").innerHTML = "tarado";
+        document.getElementById("demo2").innerHTML = "NOOO!!!!";
     }
 }
 
@@ -62,6 +62,8 @@ function answer(num)    {
         arrayAnswer.push(num)
         //document.getElementById("demo2").innerHTML = arrayAnswer;
         console.log(arrayAnswer);
+
+        //insert audio here
 
         if (arrayAnswerLength == arrayQuestionLength -1)  {
               
@@ -86,16 +88,16 @@ checkAnswer();
 
 
                 function delay(i)    {
-                     let k = i;
-                    setTimeout(() => {document.getElementById("demo3").innerHTML = arrayQuestion[k]; setTimeout (()=>{document.getElementById("button"+ (num+1)).style.color = "white";  }, 700 * (k +1) );}, 700 * (k+1));
+                     var k = i;
+                    setTimeout(() => {document.getElementById("demo3").innerHTML = arrayQuestion[i]; setTimeout(()=>{document.getElementById("button"+ arrDelay[i]).classList.remove('playing') ;  }, 400 ); document.getElementById("button"+ arrDelay[i]).classList.add('playing');}, 700 * (k +1));
                     
-                    console.log(arrDelay[k]);
-                    return arrDelay[k];
+                    console.log(arrDelay[i]);
+                    return arrDelay[i];
                 }
 
                 //arrDelay.forEach(setInterval(document.getElementById("demo3").innerHTML = (arrDelay ), 2000));
                 //play note for note with pause in between
-                return k;
+                return i;
         }
 
 

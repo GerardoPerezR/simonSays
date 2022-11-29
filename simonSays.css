@@ -2,17 +2,26 @@
 
 .botones    {
 
-    background-color: aqua;
+    
     display: grid;
     grid-gap: 12px;
     grid-template-columns: auto auto;
     
 
 }
+
+
 .button {
 
 
-    font-size: 12vw;
+   font-size: 120px;
+   transition: all 100ms;
+
+}
+.playing {
+  transform: scale(1.1);
+  border-color: white;
+  background-color: aquamarine !important;
 
 }
 
@@ -38,22 +47,31 @@ align-items: center;
 #button1    {
 
     background-color: red;
+    border-radius: -96px;
+    
+    
 
 }
 
 #button2    {
 
     background-color: blue;
-
+   
 }
 
 #button3    {
 
         background-color: green;
-
+       
 }
 
 #button4    {
 
     background-color: yellow;
+  
 }
+
+
+  
+
+ 
