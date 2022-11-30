@@ -8,7 +8,9 @@
     grid-template-columns: 360px 360px;
     align-items: center;
     justify-content: center;
-    
+    margin-left: 120px;
+    position: absolute;
+
 
 }
 
@@ -21,13 +23,19 @@
    width: 360px;
    transition: all 200ms;
    margin: 0;
+   
+
 
 
 }
 .playing {
   
   border-color: white;
-  background-color: aquamarine !important;
+
+background-color: aquamarine !important;
+
+
+
 
 }
 
@@ -41,10 +49,10 @@
 border-radius: 100%;
 background-color: black;
 position: absolute;
-top:26vh;
-left: 38vw;
-width: 24vw;
-height: 24vw;
+left: 180px;
+top: auto;
+width: 360px;
+height: 360px;
 
 
 }
@@ -61,6 +69,9 @@ height: 24vw;
 
 body    {
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
 }
 #demo2  {
 
@@ -80,7 +91,7 @@ align-items: center;
 #button1    {
 
     background-color: red;
-    border-radius: 100% 0 0 0;
+    border-radius: 100% 10% 90% 10%;
     
     
 
@@ -89,21 +100,21 @@ align-items: center;
 #button2    {
 
     background-color: blue;
-    border-radius: 0 100% 0 0;
+    border-radius: 10% 100% 10% 90%;
    
 }
 
 #button3    {
 
         background-color: green;
-        border-radius: 0 0 0 100%;
+        border-radius: 10% 90% 10% 100%;
        
 }
 
 #button4    {
 
     background-color: yellow;
-    border-radius: 0 0 100% 0;
+    border-radius: 90% 10% 100% 10%;
 }
 
 
