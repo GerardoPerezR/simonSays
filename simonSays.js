@@ -89,11 +89,11 @@ checkAnswer();
 
                 function delay(i)    {
                      var k = i;
-                    setTimeout(() => {; setTimeout(()=>{document.getElementById("button"+ arrDelay[i]).classList.remove('playing') ;  }, 400 ); document.getElementById("button"+ arrDelay[i]).classList.add('playing');}, 700 * (k +1));
-                    
+                   setTimeout(() => {; setTimeout(()=>{document.getElementById("button"+ arrDelay[i]).classList.remove('playing') ;  }, 400 );              document.getElementById("button"+ arrDelay[i]).classList.add('playing');}, 700 * (k +1)); 
+                   //  setTimeout(() => {; setTimeout(()=>{document.getElementById("button"+ arrDelay[i]).style.filter = "brightness(400%)" ;  }, 400 );        document.getElementById("button"+ arrDelay[i]).style.filter = "brightness(100%)";}, 700 * (k +1));  
                     console.log(arrDelay[i]);
                     return arrDelay[i];
-                }
+                } 
 
                 //arrDelay.forEach(setInterval(document.getElementById("demo3").innerHTML = (arrDelay ), 2000));
                 //play note for note with pause in between
@@ -104,4 +104,4 @@ checkAnswer();
         function myPlay(num)   {
             var audio = new Audio ("sample" + num + ".mp3");
         }
-
+        
