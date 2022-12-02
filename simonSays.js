@@ -2,7 +2,7 @@
 const  arrayQuestion = [] ;
 const  arrayAnswer   = [] ;
 const arrDelay       = [] ;
-var num = 0
+
 
 function simonSays()  {
           
@@ -58,13 +58,14 @@ function answer(num)    {
 
         var  arrayAnswerLength = arrayAnswer.length;
         var arrayQuestionLength = arrayQuestion.length;
-
+        var sound=  new Audio("beep" + num + ".m4a");
         arrayAnswer.push(num)
         //document.getElementById("demo2").innerHTML = arrayAnswer;
         console.log(arrayAnswer);
 
         //insert audio here
-
+        sound.play();
+       
         if (arrayAnswerLength == arrayQuestionLength -1)  {
               
 checkAnswer();
@@ -89,7 +90,8 @@ checkAnswer();
 
                 function delay(i)    {
                      var k = i;
-                   setTimeout(() => {; setTimeout(()=>{document.getElementById("button"+ arrDelay[i]).classList.remove('playing') ;  }, 400 );              document.getElementById("button"+ arrDelay[i]).classList.add('playing');}, 700 * (k +1)); 
+                     var sound=  new Audio("beep" + arrDelay[i] + ".m4a");
+                   setTimeout(() => {; setTimeout(()=>{document.getElementById("button"+ arrDelay[i]).classList.remove('playing') , sound.play();}, 400 );              document.getElementById("button"+ arrDelay[i]).classList.add('playing');}, 700 * (k +1)); 
                    //  setTimeout(() => {; setTimeout(()=>{document.getElementById("button"+ arrDelay[i]).style.filter = "brightness(400%)" ;  }, 400 );        document.getElementById("button"+ arrDelay[i]).style.filter = "brightness(100%)";}, 700 * (k +1));  
                     console.log(arrDelay[i]);
                     return arrDelay[i];
@@ -102,6 +104,6 @@ checkAnswer();
 
 
         function myPlay(num)   {
-            var audio = new Audio ("sample" + num + ".mp3");
+            var audio = new Audio ("sample" + num + ".m4a");
         }
         
