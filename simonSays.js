@@ -45,13 +45,15 @@ return arrayQuestion;
 function checkAnswer()    {
 
     //document.getElementById("demo2").innerHTML = arrayAnswer;
-
+    var sound = new Audio("ERROR.m4a");
     if (JSON.stringify(arrayQuestion) == JSON.stringify(arrayAnswer))   {
         simonSays();
     }
     else {
         document.getElementById("demo2").innerHTML = "NOOO!!!!";
+        sound.play();
     }
+
 }
 
 function answer(num)    {
